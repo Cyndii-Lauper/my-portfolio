@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, ReactNode } from 'react';
-import { lightTheme, darkTheme } from '@/assets/styles/themes';
+import { LIGHT, DARK } from '@/assets/styles/themes';
 
 type ThemeContextType = {
   theme: 'light' | 'dark';
@@ -36,7 +36,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    setCSSVariables(theme === 'light' ? lightTheme : darkTheme);
+    setCSSVariables(theme === 'light' ? LIGHT : DARK);
   }, [theme]);
 
   return (
