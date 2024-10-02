@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '@/contexts/ThemeContext';
+import { ThemeContext } from '@/contexts';
 import { Menu } from '@/components';
 export const Header: React.FC = () => {
   const themeContext = useContext(ThemeContext);

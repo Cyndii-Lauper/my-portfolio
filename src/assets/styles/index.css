@@ -14,3 +14,12 @@ body {
     background-color 0.3s,
     color 0.3s;
 }
+
+/* custom css */
+.perspective-120 {
+  perspective: 120px;
+}
+
+.perspective-origin-bottom {
+  perspective-origin: bottom;
+}
