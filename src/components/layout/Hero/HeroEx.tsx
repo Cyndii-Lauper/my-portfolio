@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export const HeroEx: React.FC = () => {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  });
+
   return (
     <section>
       <div className="grid grid-cols-auto grid-rows-auto">
@@ -9,9 +20,11 @@ export const HeroEx: React.FC = () => {
             Front-End Developer <br /> currently based <br /> in Viet Nam
           </h1>
         </div>
+
         <div className="grid col-start-2 justify-center">
           <h2 className="font-light text-xl">Hi i'm Minh</h2>
         </div>
+
         <div className="row-start-2 ml-[90px] mt-32 p-8">
           <p className="font-light text-xs">
             I specialize in creating engaging <br /> and innovative experiences
@@ -23,8 +36,13 @@ export const HeroEx: React.FC = () => {
             also align <br /> with business goals.
           </p>
         </div>
-        <div className="row-start-3 ml-[90px] p-8">
-          <p className="font-light text-xs">Sai gon, Viet Nam</p>
+
+        <div className="flex flex-row row-start-3 ml-[90px] p-8">
+          <p className="font-light text-xs">
+            <i className="fa-regular fa-clock" />{' '}
+            {time.toLocaleTimeString('en-GB')}
+          </p>
+          <p className="font-light text-xs ml-[10px]">Sai gon, Viet Nam</p>
         </div>
       </div>
     </section>
