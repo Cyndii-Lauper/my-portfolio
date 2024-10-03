@@ -19,7 +19,7 @@ export function Nav() {
                 animate="enter"
                 exit="exit"
               >
-                <a className="no-underline text-black text-[46px]" href={href}>
+                <a className="no-underline text-[46px]" href={href}>
                   {title}
                 </a>
               </motion.div>

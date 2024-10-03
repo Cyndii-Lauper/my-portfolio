@@ -31,10 +31,11 @@ export function Menu() {
   return (
     <div className="fixed right-[50px] top-[1.5%]">
       <motion.div
-        className="w-[480px] h-[650px] bg-[#c9fd74] rounded-[25px] relative"
+        className="w-[480px] h-[650px] rounded-[25px] relative"
         variants={menu}
         animate={isActive ? 'open' : 'closed'}
         initial="closed"
+        style={{ backgroundColor: `var(--color-background)` }}
       >
         <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
       </motion.div>
