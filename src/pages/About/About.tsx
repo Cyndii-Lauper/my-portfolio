@@ -1,12 +1,17 @@
+import { Hero } from '@/components';
 import React from 'react';
 
 export const About: React.FC = () => {
   return (
-    <div className="p-8">
-      <h2 className="text-2xl mb-4">About Us</h2>
-      <p>This is the about page of the application.</p>
-      <div className="bg-white dark:bg-gray-800">
-        <p className="text-black dark:text-white">Hello World</p>
+    <div className="grid h-screen w-full grid-rows-1 place-items-center md:grid-rows-3 gap-4 xs:grid-rows-1">
+      <div className="md:row-span-1">
+        <Hero />
+      </div>
+      <div className="md:row-span-2">
+        <div className="flex flex-col md:flex-row gap-4 row-span-1">
+          <div className="">Content 1</div>
+          <div className="">Content 2</div>
+        </div>
       </div>
     </div>
   );
